@@ -171,138 +171,139 @@ main {
   max-width: 1800px;
   margin: 0 auto;
   overflow-x: hidden;
+}
+
+main h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.1;
+}
+
+@media screen and (min-width: 900px) {
   h1 {
+    width: 70%;
+    font-size: 4rem;
+  }
+}
+h1 b {
+  color: #e0dd02;
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+}
+.earth {
+  width: 80%;
+  margin: 2em auto;
+  animation: spin 8s ease-in-out infinite forwards;
+}
+
+/* Unlike */
+.unlikeWrapper {
+  padding: 3em 0;
+}
+
+.unlikeWrapper .unlike {
+  text-align: center;
+}
+
+.unlikeWrapper .unlike h2 {
+  font-size: 1.4rem;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.unlikeWrapper .unlike p {
+  width: 100%;
+  margin: 1em auto;
+}
+
+@media screen and (min-width: 900px) {
+  .unlikeWrapper .unlike h2 {
+    width: 40%;
+    font-size: 3rem;
+  }
+
+  .unlikeWrapper .unlike p {
+    width: 60%;
+  }
+}
+
+.cardWrapper {
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.midCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  width: 100%;
+}
+
+.cardWrapper .card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1em;
+  height: 240px;
+  padding: 40px 18px;
+  border-radius: 9px;
+  background: #0f210f;
+}
+.cardWrapper .card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cardWrapper .card p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-top: 1.5em;
+  width: 100%;
+}
+
+.cardWrapper .card figure img {
+  width: 48px;
+  height: 48px;
+}
+
+#card1,
+#card4 {
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  .midCard {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    width: 90%;
+  }
+
+  .cardWrapper .card {
+    padding: 40px 48px;
+  }
+  .cardWrapper .cardp {
+    font-size: 1.1rem;
+    width: 90%;
+  }
+  .cardWrapper .cardh4 {
     font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    line-height: 1.1;
-    @media screen and (min-width: 900px) {
-      width: 70%;
-      font-size: 4rem;
-    }
-    b {
-      color: #e0dd02;
-    }
   }
-  .hero {
-    position: relative;
-    z-index: 2;
-  }
-  .earth {
-    width: 80%;
-    margin: 2em auto;
-    animation: spin 8s ease-in-out infinite forwards;
-  }
-
-  /* Unlike */
-  .unlikeWrapper {
-    padding: 3em 0;
-
-    .unlike {
-      h2 {
-        font-size: 1.4rem;
-        width: 90%;
-        margin: 0 auto;
-        line-height: 1.4;
-      }
-      text-align: center;
-
-      p {
-        width: 100%;
-        margin: 1em auto;
-      }
-
-      @media screen and (min-width: 900px) {
-        h2 {
-          width: 40%;
-          font-size: 3rem;
-        }
-
-        p {
-          width: 60%;
-        }
-      }
-    }
-
-    .cardWrapper {
-      margin: 3em auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2em;
-
-      .midCard {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 1em;
-        width: 100%;
-      }
-
-      .card {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 1em;
-        height: 240px;
-        padding: 40px 18px;
-        border-radius: 9px;
-        background: #0f210f;
-
-        h4 {
-          font-size: 1.1rem;
-          font-weight: 700;
-          line-height: 1.2;
-        }
-
-        p {
-          font-size: 0.8rem;
-          font-weight: 300;
-          margin-top: 1.5em;
-          width: 100%;
-        }
-
-        figure {
-          img {
-            width: 48px;
-            height: 48px;
-          }
-        }
-      }
-
-      #card1,
-      #card4 {
-        width: 100%;
-      }
-
-      @media screen and (min-width: 900px) {
-        .midCard {
-          display: flex;
-          flex-direction: row;
-          gap: 1em;
-          width: 90%;
-        }
-
-        .card {
-          padding: 40px 48px;
-
-          p {
-            font-size: 1.1rem;
-            width: 90%;
-          }
-          h4 {
-            font-size: 2rem;
-          }
-        }
-        #card1,
-        #card4 {
-          width: 50%;
-        }
-      }
-    }
+  #card1,
+  #card4 {
+    width: 50%;
   }
 }
 
@@ -323,44 +324,43 @@ main {
 footer {
   padding: 5em 0;
   background: #132016;
-
-  article {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .topfooter {
-    display: flex;
-    justify-content: space-between;
-
-    .logo {
-      width: 40%;
-      figure {
-        width: 50%;
-      }
-    }
-
-    .footerLinks {
-      width: 50%;
-      display: flex;
-      justify-content: space-between;
-
-      ul {
-        margin-top: 2em;
-        li {
-          margin: 1.3em 0;
-        }
-      }
-    }
-  }
-
-  .bottomFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 6em;
-  }
 }
+
+footer article {
+  width: 90%;
+  margin: 0 auto;
+}
+.topfooter {
+  display: flex;
+  justify-content: space-between;
+}
+.topfooter .logo {
+  width: 40%;
+}
+
+.topfooter .logo figure {
+  width: 50%;
+}
+
+.footerLinks {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.footerLinks ul {
+  margin-top: 2em;
+}
+.footerLinks ul li {
+  margin: 1.3em 0;
+}
+
+.bottomFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6em;
+}
+
 /* ====== HOME END ==== */
 
 @media screen and (max-width: 900px) {
@@ -415,11 +415,13 @@ footer {
   /* overflow: hidden; */
   margin: 0 auto;
   margin-top: -100px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .stars {
+  position: relative;
   animation: stars 10s ease-in-out infinite forwards;
+  z-index: -1;
 }
 
 @keyframes stars {
