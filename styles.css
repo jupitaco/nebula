@@ -6,8 +6,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html body {
   margin: 0;
   padding: 0;
   font-family: 'DM Sans', sans-serif;
@@ -49,6 +48,12 @@ li {
 p {
   color: #8d8d8d;
 }
+
+.btn {
+  width: 20%;
+  margin: 1em auto;
+}
+
 /* ====== HEADER START ==== */
 
 header {
@@ -162,9 +167,10 @@ figure {
 
 main {
   padding: 5em 0;
-  width: 90%;
+  width: 100%;
+  max-width: 1800px;
   margin: 0 auto;
-
+  overflow-x: hidden;
   h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -180,7 +186,10 @@ main {
       color: #e0dd02;
     }
   }
-
+  .hero {
+    position: relative;
+    z-index: 2;
+  }
   .earth {
     width: 80%;
     margin: 2em auto;
@@ -228,6 +237,7 @@ main {
       .midCard {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 1em;
         width: 100%;
       }
@@ -357,6 +367,7 @@ footer {
   main {
     padding: 1em 0;
 
+    width: 90%;
     .earth {
       width: 100%;
     }
@@ -390,4 +401,341 @@ footer {
       margin-top: 6em;
     }
   }
+
+  .btn {
+    width: 30%;
+    margin: 1em auto;
+  }
+}
+
+.galaxyPlanets {
+  position: relative;
+  width: 100%;
+  min-height: 1300px;
+  /* overflow: hidden; */
+  margin: 0 auto;
+  margin-top: -100px;
+  z-index: 1;
+}
+
+.stars {
+  animation: stars 10s ease-in-out infinite forwards;
+}
+
+@keyframes stars {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.outline6 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  animation: earthC6 10s ease-in-out infinite forwards;
+  animation-delay: 1s;
+}
+
+@keyframes earthC6 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.outline5 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  transform: scale(0.85);
+  animation: earthC5 10s ease-in-out infinite forwards;
+  animation-delay: 1s;
+}
+
+@keyframes earthC5 {
+  0% {
+    transform: rotate(0deg) scale(0.85);
+  }
+  50% {
+    transform: rotate(-50deg) scale(0.85);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.85);
+  }
+}
+
+.outline3 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  transform: scale(0.75);
+  animation: earthC3 10s ease-in-out infinite forwards;
+  animation-delay: 1s;
+  z-index: -1;
+}
+
+@keyframes earthC3 {
+  0% {
+    transform: rotate(0deg) scale(0.75);
+  }
+  50% {
+    transform: rotate(-50deg) scale(0.75);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.75);
+  }
+}
+
+.outline2 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  transform: scale(0.6);
+  animation: outline2 10s ease-in-out infinite forwards;
+  animation-delay: 2s;
+}
+
+@keyframes outline2 {
+  0% {
+    transform: rotate(0deg) scale(0.6);
+  }
+  50% {
+    transform: rotate(50deg) scale(0.6);
+  }
+  100% {
+    transform: rotate(0deg) scale(0.6);
+  }
+}
+
+.outline {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  transform: scale(0.3);
+  animation: outline 10s ease-in-out infinite forwards;
+  animation-delay: 2s;
+}
+
+@keyframes outline {
+  0% {
+    transform: rotate(0deg) scale(0.3);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.3);
+  }
+}
+
+/* .outline4 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  transform: scale(0.8);
+} */
+
+.earthBig {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  transform: scale(0.5);
+  animation: earthSpin 10s ease-in-out infinite forwards;
+}
+
+@keyframes earthSpin {
+  0% {
+    transform: rotate(0deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.5);
+  }
+}
+/*
+.sun {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: -10%;
+  left: -39%;
+  transform: scale(0.05);
+}
+
+.yellow {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: -26%;
+  left: -44%;
+  transform: scale(0.11);
+}
+
+.blue {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: -14%;
+  right: -50%;
+  transform: scale(0.11);
+}
+
+.illustration {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: -20%;
+  right: -31%;
+  transform: scale(0.05);
+}
+
+.red {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: -25%;
+  right: -15%;
+  transform: scale(0.03);
+} */
+
+/*
+@media screen and (max-width: 900px) {
+  .galaxyPlanets {
+    position: relative;
+    width: 90%;
+    min-height: 600px;
+    margin-top: -50px;
+  }
+
+  .illustration {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -15%;
+    right: -28%;
+    transform: scale(0.07);
+  }
+
+  .red {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -17%;
+    right: -15%;
+    transform: scale(0.03);
+  }
+
+  .yellow {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -26%;
+    left: -50%;
+    transform: scale(0.11);
+  }
+
+  .blue {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -25%;
+    right: -49%;
+    transform: scale(0.11);
+  }
+}
+*/
+
+@media screen and (max-width: 600px) {
+  .galaxyPlanets {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    margin-top: 0px;
+    margin: 0 auto;
+  }
+  /*
+  .sun {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -9%;
+    left: -41%;
+    transform: scale(0.07);
+  }
+
+  .illustration {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -20%;
+    right: -31%;
+    transform: scale(0.07);
+  }
+
+  .red {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -26%;
+    right: -15%;
+    transform: scale(0.03);
+  }
+
+  .yellow {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -19%;
+    left: -50%;
+    transform: scale(0.11);
+  }
+
+  .blue {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -13%;
+    right: -50%;
+    transform: scale(0.11);
+  } */
 }
